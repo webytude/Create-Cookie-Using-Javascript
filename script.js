@@ -14,9 +14,9 @@ function setCookie(Cookiename,Cookievalue,exdays,Cookiepath) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     var expires = "expires=" + d.toGMTString();
-    document.cookie = Cookiename+"="+Cookievalue+"; "+expires + path+"/"+Cookiepath;
+    // document.cookie = Cookiename+"="+Cookievalue+"; "+expires + "path/"+Cookiepath;
+    document.cookie = Cookiename + "=" + Cookievalue + "; " + expires + "; path=/";
 }
-
 // get Cookies function
 function getCookie(Cookiename) {    
     var name = Cookiename + "=";
